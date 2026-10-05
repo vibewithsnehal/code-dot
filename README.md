@@ -4,6 +4,12 @@ A one-press code coach for Cursor and an Elgato Stream Deck. Select a file, pres
 
 Code Dot is a local editor extension backed by the Codex CLI. It is not connected to the separate ChatGPT “Your dot” conversation.
 
+## See how it works
+
+![Code Dot animated walkthrough: select a file, press the dot, read repository context, and receive an explanation with spoken feedback](assets/code-dot-walkthrough.gif)
+
+*Illustrated walkthrough using sample code. The animation shows the review flow; actual review time varies. The GIF is silent—Code Dot speaks through your Mac.*
+
 ## What it does
 
 - Captures the entire selected editor file, including unsaved edits.
@@ -50,3 +56,5 @@ Speech can be disabled under **Code Dot → Speak** in editor settings. Errors a
 ## Validation and limitations
 
 The original file review and speech flow was confirmed on a physical Stream Deck. Version 0.2 adds repository context and a logic walkthrough; repository discovery checks passed, but the full updated hardware flow still needs verification. A terminal repository test encountered a nested macOS sandbox restriction. The extension rejects selected files over 250 KB and times out reviews after five minutes.
+
+To regenerate the walkthrough, install Pillow and run `python3 scripts/make_demo.py`.
